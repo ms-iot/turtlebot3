@@ -20,13 +20,13 @@
   <arg name="configuration_basename" default="turtlebot3_lds_2d.lua"/>
 
   <!-- move_base -->
-  <include file="$(find turtlebot3_navigation)/launch/move_base.launch">
+  <include file="package://turtlebot3_navigation/launch/move_base.launch">
     <arg name="model" value="$(arg model)" />
   </include>
 
   <!-- cartographer_node -->
   <node pkg="cartographer_ros" type="cartographer_node" name="cartographer_node" 
-        args="-configuration_directory $(find turtlebot3_slam)/config
+        args="-configuration_directory package://turtlebot3_slam/config
               -configuration_basename $(arg configuration_basename)"
         output="screen">
     <remap from="/imu" to="/flat_imu"/>
