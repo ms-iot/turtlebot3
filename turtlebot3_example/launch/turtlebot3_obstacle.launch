@@ -1,4 +1,4 @@
 <launch>
-  <node pkg="turtlebot3_example" type="turtlebot3_obstacle.py" name="turtlebot3_obstacle" output="screen">
+  <node pkg="turtlebot3_example" type="turtlebot3_obstacle" name="turtlebot3_obstacle" output="screen">
   </node>
 </launch>

@@ -1,6 +1,5 @@
 <launch>
   <arg name="model"/>
-  <arg name="urdf_file" default="xacro package://turtlebot3_description/urdf/turtlebot3_waffle.urdf.xacro" />
+  <arg name="urdf_file" default="$(find xacro)/xacro --inorder &quot;$(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro&quot;" />
   <param name="robot_description" command="$(arg urdf_file)" />
 </launch>
- 
